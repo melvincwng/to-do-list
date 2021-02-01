@@ -3,7 +3,7 @@
     align-items: center;
   }
   
-  .todo-item__completed {
+.todo-item__completed {
     height: 1.5em;
     width: 1.5em;
     border: 1px solid lightblue;
@@ -13,11 +13,22 @@
     align-items: center;
   }
   
-  .todo-item__completed img {
+.todo-item__completed img {
     height: 20px;
   }
   
   .todo-item__name {
     margin-left: 5px;
+  }
+  
+.todo-item__delete {
+    color: red;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-left: 8px;
+  }
+  
+.todo-item__delete:hover {
+    cursor: pointer;
   }
   
