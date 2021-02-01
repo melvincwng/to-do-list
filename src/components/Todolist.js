@@ -42,7 +42,9 @@ class TodoList extends React.Component {
 
       // 5. pass in the method as a prop to Todo component
       return (
-        <TodoItem name={todo.name} 
+        <TodoItem 
+        key={todo.id}
+        name={todo.name} 
         isDone={todo.isDone} 
         setTodo={setTodo} 
         deleteTodo={deleteTodo}/>
@@ -50,10 +52,40 @@ class TodoList extends React.Component {
     });
   }
 
+  handleChange = (event) => {
+    this.setState({ newItemName: event.target.value });
+  };
+  
+  addNewTodo() {
+    const { newItemName: name } = this.state;
+    // lines 60 & 61 prevent empty tasks from being added
+    if (!name || !name.length) {
+      return;
+    }
+
+    this.setState({
+      todos: [
+        ...this.state.todos,
+        {
+          id: uuidv4(),
+          name: name,
+          isDone: false,
+        },
+      ],
+    });
+  }
+
   render() {
     return (
       <div>
         <div>Todolist</div>
+        <input 
+        type="text"
+        value={this.state.newItemName}
+        onChange={this.handleChange}
+        placeholder="Take a break"
+        />
+        <button onClick={() => this.addNewTodo()}>add</button>
         <div>{this.displayTodos()}</div>
       </div>
     );
