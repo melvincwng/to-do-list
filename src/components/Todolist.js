@@ -1,6 +1,7 @@
 import React from "react";
 import TodoItem from './TodoItem';
 import { v4 as uuidv4 } from "uuid"; // 1. import the UUID
+import '../App.css';
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class TodoList extends React.Component {
           isDone: false,
         },
       ],
+
+      title: props.title
     };
   }
 
@@ -89,9 +92,9 @@ class TodoList extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className="column">
         <div>
-          <b>Urgent Tasks: </b>
+          <b>{this.state.title}</b>
         </div>
         <input 
         type="text"

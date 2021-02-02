@@ -1,14 +1,5 @@
-.column {
-  width: 22.5%;
-  display: grid;
-  justify-content: center;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.column{
+  margin:10px;
 }
 
 body {
