@@ -28,3 +28,17 @@ describe("add button and input text", () => {
     expect(getByText("eat")).toBeInTheDocument();
   });
 });
+
+describe("add-new-list button and input text", () => {
+  it("should add a new list", () => {
+    const { getByText, getByLabelText } = render(<App />);
+    const textInput = getByLabelText("filter-text-2");
+    const addButton = getByText("Add new list");
+    fireEvent.change(textInput, {
+      target: { value: "New list" },
+    });
+    fireEvent.click(addButton);
+    expect(() => getByText("")).toThrowError();
+    expect(getByText("New list")).toBeInTheDocument();
+  });
+});

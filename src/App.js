@@ -40,6 +40,7 @@ function App() {
           <input type="text" value={newListName} 
           onChange={(e) => setNewListName(e.target.value)}
           placeholder = 'name for new list'
+          aria-label="filter-text-2"
           >
           </input>
           <button onClick={(e) => addNewList(e)}>Add new list</button>
