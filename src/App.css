@@ -1,5 +1,32 @@
-.App {
- 
+.column {
+  width: 22.5%;
+  display: grid;
+  justify-content: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-image: url("https://cdn1.vectorstock.com/i/1000x1000/13/40/todo-list-seamless-pattern-universal-background-vector-7561340.jpg");
+  background-color: #cccccc;
+ }
+
+.header {
+  height: 2em;
+  background-color: pink;
+  color: white;
+  line-height: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 1em;
 }
 
 .App-logo {

@@ -9,17 +9,27 @@ class TodoList extends React.Component {
       todos: [
         {
           id: uuidv4(), // 2. add uuid to the item
-          name: "Learn Coding",
+          name: "Breakfast",
           isDone: false,
         },
         {
           id: uuidv4(), // 3.add uuid to the item
-          name: "Practice coding problems",
+          name: "Lunch",
           isDone: true,
         },
         {
           id: uuidv4(), // 2. add uuid to the item
-          name: "Codecademy",
+          name: "Dinner",
+          isDone: false,
+        },
+        {
+          id: uuidv4(), // 2. add uuid to the item
+          name: "Exercise/Walk",
+          isDone: false,
+        },
+        {
+          id: uuidv4(), // 2. add uuid to the item
+          name: "Swimming",
           isDone: false,
         },
       ],
@@ -86,13 +96,10 @@ class TodoList extends React.Component {
     });
   }
 
-  
   render() {
     return (
       <div>
-        <div>
-          <b>Urgent Tasks: </b>
-        </div>
+        <div><b>Regular Tasks:</b></div>
         <input 
         type="text"
         aria-label="filter-text"

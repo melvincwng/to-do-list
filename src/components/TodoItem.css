@@ -6,7 +6,7 @@
 .todo-item__completed {
     height: 1.5em;
     width: 1.5em;
-    border: 1px solid lightblue;
+    border: 1px solid black;
     border-radius: 0.75em;
     display: flex;
     justify-content: center;
@@ -15,6 +15,7 @@
   
 .todo-item__completed img {
     height: 20px;
+    border-radius: 0.75em;
   }
   
   .todo-item__name {

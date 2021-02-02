@@ -6,7 +6,7 @@ const TodoItem = ({ name, isDone, setTodo, deleteTodo }) => (
     <div className="todo-item">
         {/*on clicking the circle, toggle the status of the todo item*/}
       <span className="todo-item__completed" onClick={() => setTodo(!isDone)}>
-        {isDone && <img alt="done" src={`${process.env.PUBLIC_URL}/tick.png`} />}
+        {isDone && <img alt="done" src={`${process.env.PUBLIC_URL}/tick.jpg`} />}
       </span>
       <span className="todo-item__name">{name}</span>
   
